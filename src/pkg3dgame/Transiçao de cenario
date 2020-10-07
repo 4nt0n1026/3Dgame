@@ -1,0 +1,65 @@
+//tela de menu creio que nos ja temos entao noa importa , bem vc é inteligente , nada disso importa
+
+package jogos;
+
+import jplay.gamImage;
+
+  public class main (
+     public static void main(String[] args) {
+		 window janela = new Window(700, 500);
+		 GameImage plano = new GameImage(URL.sprite("menu.png"));
+		 Keyboard teclado = janela.getKeyboard();
+		 
+		 While (true) {
+		 
+		    plano.draw();
+			  janela.update();
+				
+				if (teclado.KeyDown(Keyboard.ENTER_KEY)) {
+				    new Cenario1(janela);
+						
+					}
+			}
+   }
+}
+	  //as configuraçoes podem ser trocados como cenario e a tecla do Kyboard
+	  
+	  
+	  
+	 //em seguida vai ser a programaçao do cenario1 , por favor se possivel por em outra aba 
+	 
+	 private Scene cena;
+	 Private Jogador jogador;
+	 private Keyboard teclado;
+	 private enemy inimigo;
+	 
+	 public Cenario1(window window) {
+	 
+	     janela = window;
+		 cena = new Scene();
+		 cena.loadFromFile(URL.scenario("cenario1.scn"));
+		 jogador = new Jogador (32, 32); // o tamanho do jogador pode ser alterado da mesma forma que o do cenario, mas eu sei que vc ja fez isso to chegando la
+		 teclado = janela.getKeyboard();
+		 inimigo = new enemy(32, 32);
+	// 	 Som.play("o arquivo . mid");
+	     run();
+		 
+	{	 
+	 
+    public void run() {
+	    while (true) {
+		    jogador.controle(janela, teclado);
+			jogador.caminho(cena);
+			inimigo.caminho(cena)
+	//		zumbi.perseguir(jogador.x, jogador.y);
+	
+	        cena.moveScene(jogador);
+			
+			jogador.x += cena.getXOffset();
+			jogador.y += cena.getYOffset();
+			
+                                     .    .   .
+									 
+									 
+									 to be continued
+	 
